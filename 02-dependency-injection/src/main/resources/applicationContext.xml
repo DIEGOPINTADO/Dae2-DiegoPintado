@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="barcelona" class="pe.isil.messi.team.Barcelona" />
+    <bean name="juventus" class="pe.isil.messi.team.Juventus" />
+    <bean name="manchester" class="pe.isil.messi.team.Manchester" />
+
+    <bean name="messi" class="pe.isil.messi.player.MessiDI" >
+
+        <constructor-arg name="team" ref="barcelona" />
+
+        <!--Inyección de dependencias por setter-->
+<!--        <property name="team" ref="barcelona" />-->
+
+    </bean>
+
+
+</beans>
