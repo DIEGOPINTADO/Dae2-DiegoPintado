@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Student Edit</title>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Student Edit</h3>
+
+        <div>
+            <form action="#" method="post" th:action="@{/students/update}" th:object="${student}" >
+                <div class="form-group">
+                    <label for="documentNumber">DocumentNumber</label>
+                    <input type="text" class="form-control" id="documentNumber" th:field="*{documentNumber}" th:readonly="true" >
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">firstName</label>
+                    <input type="text" class="form-control" id="firstName" th:field="*{firstName}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">lastName</label>
+                    <input type="text" class="form-control" id="lastName" th:field="*{lastName}" >
+                </div>
+
+                <div class="form-group">
+                    <label for="age">age</label>
+                    <input type="number" class="form-control" id="age" th:field="*{age}" >
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

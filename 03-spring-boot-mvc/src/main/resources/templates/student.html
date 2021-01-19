@@ -17,7 +17,7 @@
         <h3>Students</h3>
 
         <div class="col-md-12">
-            <a href="#" class="btn btn-primary btn-sm" >Add</a>
+            <a th:href="@{/students/add}" class="btn btn-primary btn-sm" >Add</a>
         </div>
 
         <div th:switch="students">
@@ -44,8 +44,8 @@
                             <td class="text-right">
                                 <div class="btn-group">
 
-                                    <a href="#" class="btn btn-warning btn-sm" >Edit</a>
-                                    <a href="#" class="btn btn-danger btn-sm" >Delete</a>
+                                    <a th:href="@{/students/edit/{documentNumber}  (documentNumber=${student.documentNumber}) }" class="btn btn-warning btn-sm" >Edit</a>
+                                    <a th:href="@{/students/delete/{documentNumber}  (documentNumber=${student.documentNumber}) }" class="btn btn-danger btn-sm" >Delete</a>
 
                                 </div>
                             </td>
