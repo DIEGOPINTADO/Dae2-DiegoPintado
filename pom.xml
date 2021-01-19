@@ -12,6 +12,7 @@
         <module>01-inversion-of-control</module>
         <module>02-dependency-injection</module>
         <module>03-spring-boot-mvc</module>
+        <module>01-inversion-of-control-practica</module>
     </modules>
 
 
