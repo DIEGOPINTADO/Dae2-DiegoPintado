@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="helicoptero" class="pe.isil.vehiculos.Helicoptero" />
+    <bean name="jet" class="pe.isil.vehiculos.Jet" />
+    <bean name="ferrari" class="pe.isil.vehiculos.Ferrari" />
+
+    <bean name="sylvester_stallone" class="pe.isil.famosos.Sylvester_Stallone_DI">
+        <!--Inyeccion de dependencia por Setter-->
+        <property name="vehiculo" ref="helicoptero" />
+    </bean>
+</beans>
